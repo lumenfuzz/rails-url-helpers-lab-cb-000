@@ -10,7 +10,7 @@ class StudentsController < ApplicationController
   end
 
   def activate
-    @student = Student.find(params[:id])
+    @students = Student.all
     byebug
     redirect_to "/students/#{@student.id}"
   end

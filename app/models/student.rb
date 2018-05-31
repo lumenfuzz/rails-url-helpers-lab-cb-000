@@ -1,5 +1,4 @@
 class Student < ActiveRecord::Base
-  include ActiveModel::Dirty
   attr_accessor :active
   after_initialize :init
   def to_s
@@ -7,5 +6,9 @@ class Student < ActiveRecord::Base
   end
   def init
     self.active = false if self.active.nil?
+  end
+  def active=(val)
+    @active = val
+    self.save
   end
 end

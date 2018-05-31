@@ -17,7 +17,6 @@ class StudentsController < ApplicationController
   private
 
     def set_student
-      byebug
       @student = Student.find(params[:id])
     end
 end

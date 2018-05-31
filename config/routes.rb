@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  byebug
   resources :students, only: :index
   resources :students, only: :show
   resources :students, only: :activate_student

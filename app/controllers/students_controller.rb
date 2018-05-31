@@ -11,8 +11,6 @@ class StudentsController < ApplicationController
 
   def activate
     @student = Student.find(params[:id])
-    @student.active = false
-    @student.save
     redirect_to "/students/#{@student.id}"
   end
 
@@ -24,5 +22,7 @@ class StudentsController < ApplicationController
 
     def update_student
       @student = Student.find(params[:id])
+      @student.active ? @student.active = false : @student.active = true
+      @student.save
     end
 end

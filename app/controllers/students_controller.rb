@@ -22,7 +22,7 @@ class StudentsController < ApplicationController
 
     def update_student
       @student = Student.find(params[:id])
-      @student.active = true
+      @student.active = false
       @student.save
     end
 end

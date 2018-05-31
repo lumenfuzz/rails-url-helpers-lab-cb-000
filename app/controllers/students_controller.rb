@@ -5,7 +5,7 @@ class StudentsController < ApplicationController
   def index
     @students = Student.all
     @students.each do |student|
-      @student.active = true
+      student.active = true
     end
   end
 

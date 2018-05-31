@@ -11,12 +11,12 @@ class Student < ActiveRecord::Base
   end
   def save
     super
-    byebug
+    # byebug
     if self.active
       Student.update_all(active: true)
     else
       Student.update_all(active: false)
     end
-    byebug
+    # byebug
   end
 end

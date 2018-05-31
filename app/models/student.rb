@@ -11,6 +11,7 @@ class Student < ActiveRecord::Base
   end
   def save
     super
+    byebug
     if self.active
       Student.update_all(active: false)
     else

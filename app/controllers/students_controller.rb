@@ -8,6 +8,11 @@ class StudentsController < ApplicationController
   def show
   end
 
+  def activate
+    puts "===|=|=|=|=|=SUPER TEST=|=|=|=|=|==="
+    byebug
+  end
+
   private
 
     def set_student

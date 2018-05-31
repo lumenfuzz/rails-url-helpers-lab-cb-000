@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  Student.create!(first_name: "John", last_name: "Doe")
   resources :students, only: :index
   resources :students, only: :show
   resources :students, only: :activate_student

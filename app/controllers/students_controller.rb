@@ -9,10 +9,7 @@ class StudentsController < ApplicationController
   end
 
   def activate
-    @student = Student.find(params[:id])
-    @student.active ? @student.active = false : @student.active = true
-    byebug
-    @student.save
+    Student.find(params[:id]).active ? Student.find(params[:id]).active = false : Student.find(params[:id]).active = true
     redirect_to "/students/#{@student.id}"
   end
 

@@ -9,6 +9,7 @@ class StudentsController < ApplicationController
   end
 
   def activate
+    byebug
     @student.active ? @student.active = false : @student.active = true
   end
 

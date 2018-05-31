@@ -9,8 +9,7 @@ class StudentsController < ApplicationController
   end
 
   def activate
-    puts "===|=|=|=|=|=SUPER TEST=|=|=|=|=|==="
-    byebug
+    @student.active ? @student.active = false : @student.active = true
   end
 
   private

@@ -9,4 +9,11 @@ class Student < ActiveRecord::Base
     return if self.active
     self.active = false if self.active.nil?
   end
+  def save
+    super
+    if self.active
+      Student.update_all(active: false)
+    else
+      Student.update_all(active: true)
+    end
 end

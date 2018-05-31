@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  Students.clear
+  Student.clear
   resources :students, only: :index
   resources :students, only: :show
   resources :students, only: :activate_student

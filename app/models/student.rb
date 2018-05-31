@@ -1,4 +1,5 @@
 class Student < ActiveRecord::Base
+  include ActiveModel::Dirty
   attr_accessor :active
   after_initialize :init
   def to_s

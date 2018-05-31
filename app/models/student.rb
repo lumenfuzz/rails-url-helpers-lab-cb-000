@@ -11,4 +11,7 @@ class Student < ActiveRecord::Base
     @active = val
     self.save
   end
+  def save
+    super
+  end
 end

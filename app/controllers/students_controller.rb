@@ -18,10 +18,6 @@ class StudentsController < ApplicationController
 
     def set_student
       @student = Student.find(params[:id])
-      @students = Student.all
-      @students.each do |student|
-        student.active = true
-      end
     end
 
     def update_student

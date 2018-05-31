@@ -7,6 +7,7 @@ class StudentsController < ApplicationController
   end
 
   def show
+    @students = Student.all
     @students.each do |student|
       student.active = true
     end

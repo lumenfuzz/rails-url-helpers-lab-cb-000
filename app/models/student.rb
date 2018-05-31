@@ -1,6 +1,7 @@
 class Student < ActiveRecord::Base
   attr_accessor :active
-  def initialize
+  def initialize(params)
+    super
     @active = false
   end
   def to_s

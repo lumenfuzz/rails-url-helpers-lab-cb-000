@@ -16,4 +16,5 @@ class Student < ActiveRecord::Base
     else
       Student.update_all(active: true)
     end
+  end
 end

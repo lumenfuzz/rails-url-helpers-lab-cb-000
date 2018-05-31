@@ -13,9 +13,9 @@ class Student < ActiveRecord::Base
     super
     byebug
     if self.active
-      Student.update_all(active: false)
-    else
       Student.update_all(active: true)
+    else
+      Student.update_all(active: false)
     end
   end
 end

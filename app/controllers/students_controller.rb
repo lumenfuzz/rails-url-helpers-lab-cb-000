@@ -10,6 +10,7 @@ class StudentsController < ApplicationController
 
   def activate_student
     @student = Student.find(params[:id])
+    byebug
   end
 
   def activate

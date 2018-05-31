@@ -1,6 +1,6 @@
 class Student < ActiveRecord::Base
   attr_accessor :active
-  after_initalize :init
+  after_initialize :init
   def to_s
     self.first_name + " " + self.last_name
   end

@@ -5,6 +5,6 @@ class Student < ActiveRecord::Base
     self.first_name + " " + self.last_name
   end
   def init
-    self.active = false if self.active.nil?
+    self.active = true if self.active.nil?
   end
 end

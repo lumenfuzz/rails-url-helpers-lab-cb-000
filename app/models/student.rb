@@ -6,6 +6,7 @@ class Student < ActiveRecord::Base
   end
   def self.create!(params)
     super
+    self.active = false if self.active.nil?
   end
   def set_defaults
     self.active = false if self.active.nil?

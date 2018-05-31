@@ -6,6 +6,7 @@ class Student < ActiveRecord::Base
     self.first_name + " " + self.last_name
   end
   def set_defaults
+    return if self.active
     self.active = false if self.active.nil?
   end
 end

@@ -4,9 +4,6 @@ class StudentsController < ApplicationController
 
   def index
     @students = Student.all
-    @students.each do |student|
-      student.active = true
-    end
   end
 
   def show

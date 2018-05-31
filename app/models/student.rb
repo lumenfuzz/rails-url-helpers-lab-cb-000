@@ -1,6 +1,6 @@
 class Student < ActiveRecord::Base
   attr_accessor :active
-  after_initialize :set_defaults, unless: :persisted?
+  after_initialize :set_defaults
   after_create :set_defaults
   def to_s
     self.first_name + " " + self.last_name
